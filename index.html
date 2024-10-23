@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor Game</title>
+
+    <!-- Icon link-->
+    <link
+      rel="shortcut icon"
+      href="./assets/rockPaperScissorLogo.webp"
+      type="assets/x-icon"
+    />
+
+    <!-- CSS link-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/rockPaperScissorLogo.webp" alt="" />
+      <h2>ROCK-PAPER-SCISSOR</h2>
+      <img src="./assets/rockPaperScissorLogo.webp" alt="" />
+    </header>
+
+    <!-- Opponent Choices Container-->
+    <div id="opponentContainer">
+      <h1 class="titleAndOpponent">Rock Paper Scissor Game</h1>
+      <!-- VS ComputerOrPlayer Container -->
+      <button onclick="vsOpponent(`player`)">VS Player</button>
+      <button onclick="vsOpponent(`computer`)">VS Computer</button>
+    </div>
+
+    <!-- Rock Paper Scissor Main Container -->
+    <div class="rockPaperScissorContainer" id="rockPaperScissorContainer">
+      <!-- Exit button -->
+      <button class="exit" onclick="exit()" title="BACK">
+        <img src="./assets/exit.png" alt="return to Opponent Option" />
+      </button>
+
+      <h1 class="titleAndOpponent">Rock Paper Scissor Game</h1>
+      <h4>INSTRUCTION:</h4>
+      <h5 id="instruction"></h5>
+      <span>
+        <button class="choices" onclick="picked(`rock`)" title="ROCK">
+          ✊
+        </button>
+        <button class="choices" onclick="picked(`paper`)" title="PAPER">
+          🖐️</button
+        ><button class="choices" onclick="picked(`scissor`)" title="SCISSOR">
+          ✂️
+        </button>
+      </span>
+
+      <!-- Result -->
+      <h1 id="result">Result</h1>
+
+      <!-- Reset Score -->
+      <button class="reset" onclick="reset()">Reset</button>
+
+      <!-- Player and Computer Picked images -->
+      <div id="playerPickImage" class="imagePickContainer"></div>
+      <div id="compPlayerPickImg" class="imagePickContainer"></div>
+    </div>
+
+    <footer>
+      <h3>© 2024 Adrian Julius Villaruel. All rights reserved.</h3>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
